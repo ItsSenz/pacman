@@ -1,0 +1,21 @@
+{"frames": {
+
+"pacman.png":
+{
+	"frame": {"x":1,"y":1,"w":133,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":143,"y":183,"w":133,"h":51},
+	"sourceSize": {"w":430,"h":430},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "ms-pacman.png",
+	"format": "RGBA8888",
+	"size": {"w":135,"h":53},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:58ef7eea2574e7488401682cd910c5f4:8452c2e2bb7d9aa8540ba4ec057a659e:7200d3c722a02dc29226b97a5c0a71e4$"
+}
+}
