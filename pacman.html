@@ -42,6 +42,9 @@
 	<!-- End -->
 
     var game = new Phaser.Game(448, 496, Phaser.AUTO);
+    var time;
+    var min = 0;
+    var sec = 55;
 
     var Pacman = function (game) {
 
@@ -139,8 +142,20 @@
 
             this.pacman.play('munch');
             this.move(Phaser.LEFT);
+	    time = game.time.create(false);
+	    time.loop(1000, this.updateC, this);
+	    time.start();
+	    this.text3=game.add.text(315, 100, sec +" secs", { fill: "#fff"});
+	    this.text4=game.add.text(55, 100, min +" mins", { fill: "#fff"});
 
         },
+	    updateC: function (){
+		sec ++;
+		if (sec == 60 ){
+		min++;
+		sec = 0;
+				}
+		},
 
         checkKeys: function () {
 
@@ -317,6 +332,8 @@
             {
                 this.turn();
             }
+	    this.text3.text= sec +" secs";
+	    this.text4.text= min +" mins";
 
         }
 
