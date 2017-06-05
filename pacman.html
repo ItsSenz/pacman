@@ -266,9 +266,11 @@
 
             if (this.dots.total === 0)
             {
-		    this.text = game.add.text(149,151,"Congratulations you win ");
-		    this.text = game.add.text(161,151,"Press F5 to restart the game " );
-		
+		    if ( this.diamonds.total === 0 ){
+			this.text1=game.add.text(70, 10, "Congratulations you Win", { fontSize: "19px", fill: "#fff"});
+			this.text1=game.add.text(50, 450, "Press F5 to restart the game", { fontSize: "5px", fill: "#fff"});
+			this.speed = 0 ; 
+		    }	
 		    
                 //this.dots.callAll('revive');
             }
@@ -282,9 +284,13 @@
 			score = score + 1000;
 			lives = lives + 1;
 			
-			document.getElementById("scoreText").innerHTML ="Score: " + score;
-			document.getElementById("LivesText").innerHTML ="Lives: " + lives;
-
+			if ( this.diamonds.total === 0){
+				if ( this.dots.total === 0 ){
+				this.text1=game.add.text(140, 10, "Gratz you Win", { fontSize: "19px", fill: "#fff"});
+				this.text1=game.add.text(140, 200, "Press F5 to restart the game", { fontSize: "19px", fill: "#fff"});
+                		this.speed = 0 ;
+				}
+				}
             
 
         },
